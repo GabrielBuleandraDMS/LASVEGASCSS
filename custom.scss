@@ -284,7 +284,6 @@ body.txlive{
 		}
 	}
 }
-/* CASINO GAMES LISTING*/
 .ModuleCsGames{
 	.casino-games-container{
 		.casino-game{overflow:unset !important;
@@ -329,6 +328,7 @@ body.txlive{
 		}
 	}
 }
+
 /*FOOTER*/
 footer{
 	@include breakpoint(0, 767){
@@ -1749,6 +1749,16 @@ $sports-sidebar-menu-font: 14px;
 html.mobile{
 	&[data-page-type="pagePrematch"]{
 		.main-layout{background:$bg-menu-medium;}
+	}
+	/* CASINO GAMES LISTING*/
+	.ModuleCsGames{
+		.casino-games-container{
+		    @media screen and (max-width: 767px){
+				&.horizontal{
+					.casino-game{flex-basis:calc(33.33% - 6px) !important;max-width:calc(33.33% - 6px) !important; max-width:calc(33.33% - 6px) !important;}	
+				}
+		    }
+		}
 	}
 	.sportsbook{min-height:0 !important;}
 	body{min-height:100vh;min-height:-webkit-fill-available;
@@ -4340,16 +4350,12 @@ ul.lv-mobile-footer-menu{margin:0 !important; padding:0 !important; list-style:n
 		img{width:30px;display:block;height:30px;}
 	}
 }
-iframe[src*="useranalytix"]{position:absolute;}
-.egt-egypt-custom-banners {
+.egt-egypt-custom-banners{
 	padding: unset !important;
 	.custom-html-container {
 		display: flex !important;
 		flex-direction: row !important;
 		flex-wrap: wrap;
 		flex: 1;
-		iframe {
-			min-height: 450px;
-		}
 	}
 }
